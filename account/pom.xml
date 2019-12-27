@@ -20,12 +20,13 @@
         <netty-all.version>4.0.35.Final</netty-all.version>
     </properties>
 
+
     <dependencies>
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>${netty-all.version}</version>
-        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>io.netty</groupId>-->
+        <!--<artifactId>netty-all</artifactId>-->
+        <!--<version>${netty-all.version}</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -102,8 +103,27 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>1.1.1</version>
         </dependency>
-    </dependencies>
+        <dependency>
+            <groupId>com.alibaba.nacos</groupId>
+            <artifactId>nacos-client</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 
+
+        <!--seata-->
+        <!--<dependency>-->
+            <!--<groupId>io.seata</groupId>-->
+            <!--<artifactId>seata-all</artifactId>-->
+            <!--<version>1.0.0</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+    </dependencies>
 
     <build>
         <plugins>

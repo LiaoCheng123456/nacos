@@ -2,6 +2,7 @@ package com.example.order.service;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.example.order.dao.IOrderDaoImpl;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
@@ -12,6 +13,7 @@ public class OrderService implements IOrderService{
     @Resource(name = "orderImpl")
     private IOrderDaoImpl orderDao;
     @Override
+    @Transactional
     public String createOrder(String order) {
         System.out.println("orderService服务运行");
         orderDao.addOrder(new HashMap());
