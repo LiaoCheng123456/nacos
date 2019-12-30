@@ -15,7 +15,6 @@ public class AccountService implements IAccountService{
     private IAccountDaoImpl accountDao;
 
     @Override
-    @Transactional
     public String updateAccountService(String account) {
         System.out.println("accountService服务运行");
         accountDao.addAccount(new HashMap());

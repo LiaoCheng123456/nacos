@@ -5,7 +5,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@NacosPropertySource(dataId = "account", autoRefreshed = true)
 public class AccountApplication {
 
     public static void main(String[] args) {

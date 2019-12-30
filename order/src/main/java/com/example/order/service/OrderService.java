@@ -12,8 +12,8 @@ import java.util.HashMap;
 public class OrderService implements IOrderService{
     @Resource(name = "orderImpl")
     private IOrderDaoImpl orderDao;
+
     @Override
-    @Transactional
     public String createOrder(String order) {
         System.out.println("orderService服务运行");
         orderDao.addOrder(new HashMap());
