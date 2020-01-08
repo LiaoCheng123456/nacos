@@ -18,8 +18,27 @@ public class BusinessController {
     private BusinessService businessService;
 
 
-    @GetMapping(value = "test")
-    public String test() {
-        return businessService.testService("");
+//    @GetMapping(value = "test")
+//    public String test() {
+//        return businessService.testService("");
+//    }
+
+    @GetMapping(value = "test1")
+    public String test1() {
+        businessService.redissonTest();
+        return null;
     }
+
+    @GetMapping(value = "latch")
+    public String latch() throws InterruptedException {
+        return businessService.latch();
+    }
+
+    @GetMapping(value = "countdown")
+    public String countdown() {
+        return businessService.countdown();
+    }
+
+
+
 }
