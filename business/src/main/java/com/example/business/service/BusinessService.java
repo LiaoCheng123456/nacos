@@ -1,5 +1,6 @@
 package com.example.business.service;
 
+import com.example.business.annotation.GoodsCache;
 import com.example.business.redis.RedisConfig;
 import com.example.business.redis.RedisPool;
 import org.apache.commons.lang.StringUtils;
@@ -64,5 +65,32 @@ public class BusinessService {
         RCountDownLatch latch = redissonClient.getCountDownLatch("latch");
         latch.countDown();
         return "执行了一次";
+    }
+
+    @GoodsCache(prefix = "goods:")
+    public String cache(String pid) {
+        return "{\n" +
+                "    \"code\": \"200\",\n" +
+                "    \"data\": {\n" +
+                "        \"batch\": 0,\n" +
+                "        \"intoAmount\": 0.01,\n" +
+                "        \"name\": \"内网测试\",\n" +
+                "        \"payType\": \"WECHAT\",\n" +
+                "        \"profitInfoList\": [\n" +
+                "            {\n" +
+                "                \"addTime\": 1576477752,\n" +
+                "                \"orderId\": \"1032053345657\",\n" +
+                "                \"payAmount\": 0.01,\n" +
+                "                \"profitsharingAmount\": 0.00,\n" +
+                "                \"sharingAmount\": 0.00,\n" +
+                "                \"sharingItem\": []\n" +
+                "            }\n" +
+                "        ],\n" +
+                "        \"serviceChargeAmount\": 0.00,\n" +
+                "        \"transaction_id\": \"4200000428201912166143323582\",\n" +
+                "        \"updateTime\": 1576477752\n" +
+                "    },\n" +
+                "    \"msg\": \"SUCCESS\"\n" +
+                "}";
     }
 }
