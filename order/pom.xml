@@ -15,7 +15,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <spring-boot.version>2.0.3.RELEASE</spring-boot.version>
+        <spring-boot.version>2.5.12</spring-boot.version>
         <nacos-config-spring-boot.version>0.2.1</nacos-config-spring-boot.version>
         <netty-all.version>4.0.35.Final</netty-all.version>
     </properties>
